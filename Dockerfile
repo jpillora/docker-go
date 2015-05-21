@@ -7,4 +7,5 @@ ENV PATH $PATH:/usr/local/go/bin:$GOPATH/bin
 RUN apt-get update && apt-get install -y curl ssh build-essential ca-certificates git mercurial && \
 	curl -s https://storage.googleapis.com/golang/go1.4.2.linux-amd64.tar.gz | tar -C /usr/local -xzf - && \
 	rm -rf /var/lib/apt/lists/*
-
+#install latest godep
+RUN go get github.com/tools/godep
